@@ -11,6 +11,7 @@ import java.security.Key;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -167,8 +168,13 @@ public class MD5Util {
         double a =  sxzc/(zchj-fzhj);
         System.out.println(a*100);*/
 
-        Map<String,String> map = new HashMap<>();
-        map.put("aa","aa");
+
+        LocalDate expiryDate = LocalDate.parse("2021-04-15");
+        // Parses the second date
+        LocalDate nowDate = LocalDate.now();
+
+        // Checks
+        System.out.println(expiryDate.isAfter(nowDate));
 
 
     }
